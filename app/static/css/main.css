@@ -1,0 +1,10 @@
+.image-container {
+    float:left;
+    width:250px;
+    height:400px;
+
+}
+
+.image-container > .thumbnail > img {
+  max-height: 215px;
+}
