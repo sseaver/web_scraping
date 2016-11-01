@@ -14,16 +14,14 @@
           <form method="get">
             <input type="text" name="player_name" placeholder="Enter a player's name">
             <br>
-            <form>
               <label>
                 <input type="radio" name="playerType" value="current">
                 <span>Current</span>
               </label>
               <label>
-                <input type="radio" name="playerType" value="historic">
-                <span>Historic</span>
+                <input type="radio" name="playerType" value="historical">
+                <span>Historical</span>
               </label>
-            </form>
             <br>
             <input type="submit" value="Search">
           </form>
@@ -31,8 +29,8 @@
         <div class="col-md-2">
         </div>
         <div class="col-md-4">
-          {% for link in url_links %}
-            <a href="{{ link }}">{{ link }}</a>
+          {% for link, player in url_links %}
+            <a href="{{ link }}">{{ player }}</a><br>
           {% endfor %}
         </div>
       </div>
